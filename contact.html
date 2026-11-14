@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="nl-BE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact: Anthony Van Heue</title>
+    <meta
+      name="description"
+      content="Neem contact op met Anthony Van heue, student aan hogeschool AP Antwerpen in de opleiding Systeem- en Netwerkbeheer"
+    />
+
+    <link rel="stylesheet" href="CSS/tailwind.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body class="bg-gray-900">
+    <header class="mb-6">
+      <nav
+        class="mx-auto flex flex-wrap w-full max-w-7xl items-center justify-between border-b border-gray-400 px-4 py-2"
+      >
+        <a href="index.html" class="mr-auto">
+          <img
+            src="images/AI_LOGO.png"
+            width="120"
+            alt="Logo van Anthony Van Heue"
+          />
+        </a>
+        <input type="checkbox" id="menu-knop" class="peer sr-only" />
+
+        <label
+          for="menu-knop"
+          class="cursor-pointer rounded-lg border border-gray-300 px-3 py-2 text-white md:hidden"
+        >
+          <p class="text-white font-bold">☰ Menu</p>
+        </label>
+
+        <ul
+          class="hidden w-full flex-col gap-2 font-bold text-white peer-checked:flex md:flex md:w-auto md:flex-row"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="block rounded-lg px-3 py-2 text-white hover:bg-gray-700 hover:text-sky-400"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="portfolio.html"
+              class="block rounded-lg px-3 py-2 text-white hover:bg-gray-700 hover:text-sky-400"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="project.html"
+              class="block rounded-lg px-3 py-2 text-white hover:bg-gray-700 hover:text-sky-400"
+              >Project</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="block rounded-lg px-3 py-2 text-white hover:bg-gray-700 hover:text-sky-400"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="mx-auto flex w-full max-w-7xl flex-col gap-3 px-2 md:flex-row">
+      <main class="flex w-full flex-col md:w-3/4">
+        <div
+          class="flex h-full flex-col bg-sky-800 border border-gray-200 p-2 rounded-lg py-2"
+        >
+          <section
+            class="bg-gray-100 border border-gray-200 rounded-lg p-2 mb-2 text-center"
+          >
+            <h1 class="text-4xl font-bold text-sky-500">Contact</h1>
+            <p class="mb-4 text-sm text-gray-700">
+              Velden met een
+              <span class="font-bold text-red-700">*</span>
+              zijn verplicht.
+            </p>
+          </section>
+          <section
+            class="flex-1 bg-gray-100 border border-gray-200 rounded-lg p-2"
+          >
+            <form
+              action="mailto:anthony.vanheue@student.ap.be"
+              method="post"
+              class="grid gap-4"
+              enctype="text/plain"
+            >
+              <div>
+                <label for="naam" class="block font-medium"
+                  ><span class="text-red-700" aria-hidden="true">*</span
+                  >Naam</label
+                >
+                <input
+                  type="text"
+                  id="naam"
+                  name="naam"
+                  required
+                  class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                />
+              </div>
+              <div>
+                <label for="email" class="block font-semibold"
+                  ><span class="text-red-700" aria-hidden="true">*</span
+                  >E-mailadres</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                />
+              </div>
+              <div>
+                <label for="bericht" class="block font-medium">Bericht</label>
+                <input
+                  type="text"
+                  id="bericht"
+                  name="bericht"
+                  required
+                  class="mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                />
+              </div>
+              <div>
+                <label for="gsm" class="block font-medium">GSM-nummer</label>
+                <input
+                  type="tel"
+                  id="gsm"
+                  name="gsm"
+                  autocomplete="tel"
+                  pattern="04[0-9]{8}"
+                  title="Tien cijfers, beginnend met 04, zonder spaties"
+                  aria-describedby="gsm-hulp gsm-fout"
+                  class="peer mt-1 w-full rounded-lg border border-gray-400 bg-white px-3 py-2 invalid:border-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+                />
+                <p id="gsm-hulp" class="mt-1 text-sm text-gray-600">
+                  Niet verplicht. Tien cijfers zonder spaties, bijvoorbeeld
+                  0412345678.
+                </p>
+                <p
+                  id="gsm-fout"
+                  class="mt-1 hidden text-sm font-semibold text-red-700 peer-invalid:block"
+                >
+                  Dit nummer klopt niet. Schrijf het zonder spaties: 0412345678.
+                </p>
+              </div>
+
+              <button
+                type="submit"
+                class="w-fit rounded-lg bg-blue-700 px-4 py-2 font-semibold text-white hover:bg-blue-800"
+              >
+                Versturen
+              </button>
+            </form>
+          </section>
+        </div>
+      </main>
+      <aside
+        class="w-full rounded-lg border border-gray-200 bg-gray-100 p-2 md:w-1/4"
+      >
+        <h2 class="text-4xl font-bold text-sky-500 text-center">Extra info</h2>
+
+        <img
+          src="images/IMG20260926220612.jpg"
+          alt="selfie anthony"
+          class="mb-2 h-50 w-50 rounded-full object-cover mx-auto mt-5"
+        />
+        <p class="mt-2 px-2 py-2">
+          Ik ben Anthony Van Heue en ik studeer aan
+          <a
+            href="https://www.ap.be"
+            target="_blank"
+            class="text-blue-700 underline hover:text-sky-400"
+            >AP Antwerpen</a
+          >
+          in de richting Systeem-en Netwerk beheerder. Op deze website toon ik
+          mijn projecten en vaardigheden.
+        </p>
+      </aside>
+    </div>
+
+    <footer class="px-2 py-3 mx-auto w-full max-w-7xl">
+      <div class="rounded-lg border border-gray-200 bg-sky-800 p-2 text-center">
+        <section
+          class="rounded-lg border border-gray-200 bg-gray-100 p-2 py-3 text-center"
+        >
+          &copy; 2026 Anthony Van Heue
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
